@@ -1,0 +1,390 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #1a1a1a;
+    color: #000;
+}
+
+main, header {
+    background-color: #fff;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #a3a3a3;
+}
+
+.logo img { height: 45px; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 0.95rem;
+    font-family: sans-serif;
+}
+
+/* Hero Section */
+.hero { padding: 50px; }
+
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.title-box h1 {
+    font-size: 3.5rem;
+    line-height: 0.9;
+    font-weight: 400;
+}
+
+.title-box p { font-family: sans-serif; color: #666; margin-top: 5px; }
+
+.search-container input {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    background: #e5e5e5;
+    width: 200px;
+}
+
+.hero-images {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-img-card { flex: 1; height: 500px; }
+.hero-img-card img { width: 100%; height: 100%; object-fit: cover; }
+
+.hero-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.go-to-shop {
+    background: #dcdcdc;
+    border: 1px solid #999;
+    padding: 8px 25px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+/* Products Section */
+.products { padding: 60px 50px; text-align: center; }
+
+.section-title { font-size: 2.8rem; margin-bottom: 50px; font-weight: 400; }
+
+.product-grid { display: grid; gap: 40px; margin-bottom: 40px; }
+
+.top-grid { grid-template-columns: 1fr 1fr; padding: 0 10%; }
+.bottom-grid { grid-template-columns: 1fr 1fr 1fr; }
+
+.product-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1.3;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-item h3 { font-size: 1rem; margin-bottom: 5px; }
+.product-item p { font-size: 0.9rem; color: #444; font-family: sans-serif; }
+.star { color: #f1c40f; }
+
+.see-all {
+    background: #e3dcd9;
+    border: 1px solid #999;
+    padding: 10px 45px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+/* Banner Section */
+.promo-banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(44, 53, 211, 0.75); /* The blue tint from the image */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.banner-overlay h2 { font-size: 3rem; letter-spacing: 8px; font-weight: 400; }
+.exclusive { letter-spacing: 4px; font-size: 0.9rem; margin-bottom: 10px; }
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 60px 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    gap: 40px;
+}
+
+.footer-column h4 { font-size: 0.85rem; margin-bottom: 25px; text-transform: uppercase; font-family: sans-serif; }
+.footer-column ul { list-style: none; }
+.footer-column li { font-size: 0.8rem; color: #bbb; margin-bottom: 12px; cursor: pointer; font-family: sans-serif; }
+
+.subscribe-box { display: flex; margin-top: 10px; }
+.subscribe-box input {
+    padding: 12px;
+    border: none;
+    background: #222;
+    color: white;
+    flex: 1;
+}
+.subscribe-box button {
+    padding: 12px 20px;
+    background: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* --- SHARED STYLES (Styles that both pages use) --- */
+.logo img { height: 45px; }
+.nav-links a { text-decoration: none; color: #000; }
+
+/* --- HOME PAGE ONLY --- */
+/* This will only affect the header when it's on the home page */
+.home-page .main-header {
+    background-color: #a3a3a3; 
+    padding: 20px;
+}
+
+.home-page h1 {
+    font-size: 3rem;
+    color: black;
+}
+
+/* --- CONTACT PAGE ONLY --- */
+/* This will only affect the header when it's on the contact page */
+.contact-page .main-header {
+    background-color: #e0e0e0; /* Different gray for contact */
+    padding: 10px;
+}
+
+.contact-page h1 {
+    font-size: 2rem; /* Smaller title for contact page */
+    letter-spacing: 5px;
+}
+
+.contact-page .content-wrapper {
+    background-color: #ccc; /* Grey background matching your contact screenshot */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #1a1a1a;
+}
+.contact-page-wrapper {
+    background-color: #ccc; /* Grey background matching Screenshot 160421 */
+    width: 1000px;
+    padding: 50px;
+    border-radius: 4px;
+}
+
+/* Header & Navigation */
+.contact-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo img {
+    height: 50px;
+    background: white;
+    padding: 5px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    margin-left: 50px;
+}
+
+.nav-link-btn {
+    text-decoration: none;
+    color: black;
+    background: #e0e0e0;
+    padding: 10px 25px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.nav-link-btn.active {
+    background: #dcdcdc;
+    border: 1px solid #999;
+}
+
+/* Layout Grid */
+.content-split {
+    display: flex;
+    gap: 60px;
+}
+
+/* Left Content */
+.info-section {
+    flex: 1.2;
+    font-family: 'Playfair Display', serif;
+}
+
+.info-section h1 {
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 45px;
+    color: #333;
+}
+
+.details h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.info-block {
+    margin-bottom: 25px;
+}
+
+.info-block h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.info-block p {
+    font-size: 1.05rem;
+    font-family: serif;
+}
+
+/* Form Card (Right) */
+.form-section {
+    flex: 1;
+}
+
+.form-card {
+    background-color: #f6efed; /* Peach-white card */
+    padding: 35px;
+    border: 1px solid #888;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.1);
+}
+
+.form-card h3 {
+    text-align: center;
+    font-family: serif;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: serif;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #d8d8d8; /* Light grey input fields */
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    font-style: italic;
+    color: #777;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: serif;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+/* Mobile Compatibility */
+@media (max-width: 850px) {
+    .content-split {
+        flex-direction: column;
+    }
+    .contact-page-wrapper {
+        width: 95%;
+    }
+}
